@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="DESCRIPTION META TAG">
+  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
+  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
+  <meta property="og:url" content="URL OF THE WEBSITE"/>
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/image/your_banner_image.png" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+
+  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
+  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>PCDHMG</title>
+  <link rel="icon" type="image/x-icon" href="static/images/human.png">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <!-- <link rel="stylesheet" href="static/css/fontawesome.all.min.css"> -->
+  <link rel="stylesheet"  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <!-- <script defer src="static/js/fontawesome.all.min.js"></script> -->
+  <script src="https://kit.fontawesome.com/edbfd41333.js" crossorigin="anonymous"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">Physical Criterion for Diverse 3D Human Motion Generation via LLM-Guided Multiobjective Optimization</h1>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+              <span class="author-block">
+                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">Anonymous</a><sup>*</sup>,</span>
+            </div>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                    <!-- Arxiv PDF link -->
+                <span class="link-block">
+                  <a href="#paper-title" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                  </a>
+                </span>
+
+                <!-- Supplementary PDF link -->
+                <span class="link-block">
+                  <a href="#paper-title" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Supplementary</span>
+                  </a>
+                </span>
+
+                <!-- Github link -->
+                <span class="link-block">
+                  <a href="#paper-title" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+                </span>
+
+                <!-- ArXiv abstract Link -->
+                <span class="link-block">
+                  <a href="#paper-title" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- home page -->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img src="static/images/home.png" alt="">
+      <h2 class="subtitle has-text-centered">
+        The example of our method.
+      </h2>
+    </div>
+  </div>
+</section>
+
+<pre><code>>>></code></pre>
+
+<!-- Paper abstract -->
+<section class="section hero">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Text-driven 3D human motion generation aims to synthesize diverse motion sequences that are semantically aligned with textual descriptions. Existing generative approaches often encode the entire sentence into a single semantic embedding, which compromises both semantic consistency and physical plausibility in the generated motions.
+To address these limitations, we propose PCDHMG, a novel framework that formulates motion generation as a multiobjective optimization problem. Without introducing additional parameters, PCDHMG enhances both the diversity and quality of the generated motions. Leveraging the semantic understanding capabilities of a large language model (LLM), we decompose the input text into fine-grained behavioral units, each guiding the construction of semantically grounded objective functions. To effectively balance conflicting objectives, we adopt an evolutionary algorithm (EA) augmented by a pretrained generative model to initialize and guide population evolution. Each behavioral unit serves as a semantic anchor, steering the search process toward diverse yet semantically faithful motion sequences. Furthermore, we incorporate physics-based constraints into the optimization process to ensure that the generated motions are smooth, stable, and physically plausible.
+Experimental results on mainstream human motion datasets demonstrate that our method outperforms existing approaches in terms of both semantic consistency and diversity, providing a robust solution for generating high-quality, text-aligned human motion sequences.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="is-centered has-text-centered"><h2 class="title is-3">Overview</h2></div>
+    
+    <div class="hero-body">
+      <img src="static/images/overview_v3.png" alt="">
+      <h2 class="subtitle has-text-centered">
+        The overview of the proposed method. The text description segmented by ChatGPT is used to construct a multiobjective optimization function, which is then solved using EA. Pretrained conditional motion generation is employed to initialize the population. A unique physics-based criterion is introduced into the optimization process to ensure the quality of the generated human motions.
+      </h2>
+    </div>
+  </div>
+</section>
+
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img src="static/images/action_prompt.png" alt="">
+      <h2 class="subtitle has-text-centered">
+        The complete prompt used in ChatGPT.
+      </h2>
+    </div>
+  </div>
+</section>
+
+<section>
+<div class="container">
+  <div class="is-centered has-text-centered">
+      <pre><h2 class="title is-3 has-text-centered">🥳 Results on HumanML3D</h2></pre>
+  </div>
+</div>
+</section>
+
+
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container is-centered">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-5">
+          <h3 class="title is-3 is-light ">
+            Visualize in the form of mesh
+          </h3>
+          <div id="results-carousel" class="carousel results-carousel">
+            <div class="item item-steve">
+              <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+                <source src="./static/videos/mesh/sample00_rep00_mesh.mp4"
+                        type="video/mp4">
+              </video>
+              <h5 class="title is-5 is-light ">Taking 3 steps forward starting with left foot and then stopping.</h5>
+            </div>
+            <div class="item item-chair-tp">
+              <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+                <source src="./static/videos/mesh/sample01_rep00_mesh.mp4"
+                        type="video/mp4">
+              </video>
+              <h5 class="title is-5 is-light ">Walking forward and stomping feet.</h5>
+            </div>
+            <div class="item item-chair-tp">
+              <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+                <source src="./static/videos/mesh/sample02_rep00_mesh.mp4"
+                        type="video/mp4">
+              </video>
+              <h5 class="title is-5 is-light ">A person walks forward and to the left.</h5>
+            </div>
+            <div class="item item-chair-tp">
+              <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+                <source src="./static/videos/mesh/sample05_rep00_mesh.mp4"
+                        type="video/mp4">
+              </video>
+              <h5 class="title is-5 is-light ">A person is being still and leaning slightly to their left.</h5>
+            </div>
+            <div class="item item-chair-tp">
+              <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+                <source src="./static/videos/mesh/sample06_rep00_mesh.mp4"
+                        type="video/mp4">
+              </video>
+              <h5 class="title is-5 is-light ">A person is walking up a flight of steps.</h5>
+            </div>
+            <div class="item item-chair-tp">
+              <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+                <source src="./static/videos/mesh/sample07_rep00_mesh.mp4"
+                        type="video/mp4">
+              </video>
+              <h5 class="title is-5 is-light ">A person is jogging and then gets down and walks like an ape and then gets back up and jogs again.</h5>
+            </div>
+            <div class="item item-chair-tp">
+              <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+                <source src="./static/videos/mesh/sample09_rep00_mesh.mp4"
+                        type="video/mp4">
+              </video>
+              <h5 class="title is-5 is-light ">A man is crouching and moves his right arm slowly up and down.</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-10">
+          <div is-centered has-text-centered column is-10>
+            <h3 class="title is-3 has-text-centered">Visualize in the form of skeleton</h3>
+            <h5 class="title is-5 is-light ">
+            Diversity ouput
+          </h5>
+          </div>
+          <div id="results-carousel" class="carousel results-carousel">
+            <div class="item item-steve">
+              <video poster="" id="s11" autoplay controls muted loop playsinline height="100%">
+                <source src="./static/videos/skeleton/01/sample00_rep00.mp4"
+                        type="video/mp4">
+              </video>
+              <video poster="" id="s12" autoplay controls muted loop playsinline height="100%">
+                <source src="./static/videos/skeleton/01/sample03_rep00.mp4"
+                        type="video/mp4">
+              </video>
+              <video poster="" id="s13" autoplay controls muted loop playsinline height="100%">
+                <source src="./static/videos/skeleton/01/sample04_rep00.mp4"
+                        type="video/mp4">
+              </video>
+            </div>
+            <div class="item item-chair-tp">
+              <video poster="" id="s21" autoplay controls muted loop playsinline height="100%">
+                <source src="./static/videos/skeleton/02/sample01_rep00.mp4"
+                        type="video/mp4">
+              </video>
+              <video poster="" id="s22" autoplay controls muted loop playsinline height="100%">
+                <source src="./static/videos/skeleton/02/sample03_rep00.mp4"
+                        type="video/mp4">
+              </video>
+              <video poster="" id="s23" autoplay controls muted loop playsinline height="100%">
+                <source src="./static/videos/skeleton/02/sample14_rep00.mp4"
+                        type="video/mp4">
+              </video>
+            </div>
+            <div class="item item-chair-tp">
+              <video poster="" id="s21" autoplay controls muted loop playsinline height="100%">
+                <source src="./static/videos/skeleton/03/sample04_rep00.mp4"
+                        type="video/mp4">
+              </video>
+              <video poster="" id="s22" autoplay controls muted loop playsinline height="100%">
+                <source src="./static/videos/skeleton/03/sample07_rep00.mp4"
+                        type="video/mp4">
+              </video>
+              <video poster="" id="s23" autoplay controls muted loop playsinline height="100%">
+                <source src="./static/videos/skeleton/03/sample12_rep00.mp4"
+                        type="video/mp4">
+              </video>
+            </div>
+            <div class="item item-chair-tp">
+              <video poster="" id="s21" autoplay controls muted loop playsinline height="100%">
+                <source src="./static/videos/skeleton/04/sample00_rep00.mp4"
+                        type="video/mp4">
+              </video>
+              <video poster="" id="s22" autoplay controls muted loop playsinline height="100%">
+                <source src="./static/videos/skeleton/04/sample07_rep00.mp4"
+                        type="video/mp4">
+              </video>
+              <video poster="" id="s23" autoplay controls muted loop playsinline height="100%">
+                <source src="./static/videos/skeleton/04/sample12_rep00.mp4"
+                        type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container is-centered">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-10">
+          <h5 class="title is-5 is-light ">
+            Crossover Operation
+          </h5>
+          <div id="results-carousel" class="carousel results-carousel">
+            <div class="item item-steve">
+              <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+                <source src="./static/videos/crossover/01/sample01_rep00.mp4"
+                        type="video/mp4">
+              </video>
+              <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
+                <source src="./static/videos/crossover/01/sample02_rep00.mp4"
+                        type="video/mp4">
+              </video>
+              <div></div>
+              <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
+                <source src="./static/videos/crossover/01/sample00_rep00.mp4"
+                        type="video/mp4">
+              </video>
+            </div>
+            <div class="item item-chair-tp">
+              <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+                <source src="./static/videos/crossover/02/sample01_rep00.mp4"
+                        type="video/mp4">
+              </video>
+              <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
+                <source src="./static/videos/crossover/02/sample02_rep00.mp4"
+                        type="video/mp4">
+              </video>
+              <div></div>
+              <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
+                <source src="./static/videos/crossover/02/sample00_rep00.mp4"
+                        type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+<!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>BibTex Code Here</code></pre>
+    </div>
+</section>
+<!--End BibTex citation -->
+
+
+  <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Statcounter tracking code -->
+  
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+
+  </body>
+
+
+  <script>
+    new BeforeAfter({id: '#h3d-one'});
+    new BeforeAfter({id: '#h3d-two'});
+    new BeforeAfter({id: '#h3d-three'});
+    new BeforeAfter({id: '#h3d-four'});
+    new BeforeAfter({id: '#h3d-five'});
+    new BeforeAfter({id: '#h3d-six'});
+  
+    new BeforeAfter({id: '#humanise-one'});
+    new BeforeAfter({id: '#humanise-two'});
+    new BeforeAfter({id: '#humanise-three'});
+    new BeforeAfter({id: '#humanise-four'});
+    new BeforeAfter({id: '#humanise-five'});
+    new BeforeAfter({id: '#humanise-six'});
+  
+    new BeforeAfter({id: '#novel-one'});
+    new BeforeAfter({id: '#novel-two'});
+    new BeforeAfter({id: '#novel-three'});
+    new BeforeAfter({id: '#novel-four'});
+    new BeforeAfter({id: '#novel-five'});
+    new BeforeAfter({id: '#novel-six'});
+    new BeforeAfter({id: '#novel-seven'});
+  </script>
+  
+  </html>
