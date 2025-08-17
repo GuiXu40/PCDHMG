@@ -119,7 +119,7 @@
     <div class="hero-body">
       <img src="static/images/home.png" alt="">
       <h2 class="subtitle has-text-centered">
-        The example of our method.
+        The example of our method.<br>Our approach leverages a physics-based criterion to guide evolutionary optimization, <br>ensuring that the generated motion sequences preserve high quality while accurately reflecting the input text semantics.
       </h2>
     </div>
   </div>
@@ -134,9 +134,10 @@
       <div class="column is-four-fifths">
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
-          <p>
-            Text-driven 3D human motion generation aims to synthesize diverse motion sequences that are semantically aligned with textual descriptions. Existing generative approaches often encode the entire sentence into a single semantic embedding, which compromises both semantic consistency and physical plausibility in the generated motions.
-To address these limitations, we propose PCDHMG, a novel framework that formulates motion generation as a multiobjective optimization problem. Without introducing additional parameters, PCDHMG enhances both the diversity and quality of the generated motions. Leveraging the semantic understanding capabilities of a large language model (LLM), we decompose the input text into fine-grained behavioral units, each guiding the construction of semantically grounded objective functions. To effectively balance conflicting objectives, we adopt an evolutionary algorithm (EA) augmented by a pretrained generative model to initialize and guide population evolution. Each behavioral unit serves as a semantic anchor, steering the search process toward diverse yet semantically faithful motion sequences. Furthermore, we incorporate physics-based constraints into the optimization process to ensure that the generated motions are smooth, stable, and physically plausible.
+          <p class="subtitle">
+            Text-driven 3D human motion generation aims to synthesize diverse motion sequences that are semantically aligned with textual descriptions. 
+Most existing generative approaches encode the entire sentence into a single semantic embedding, which inevitably compromises the semantic consistency of the generated motions. Furthermore, in long sequences, the lack of explicit physical constraints often leads to physically implausible motions, particularly in the later segments.
+To address these limitations, we propose PCDHMG, a novel framework that formulates text-driven 3D human motion generation as a multiobjective optimization problem. Without introducing additional parameters, PCDHMG enhances both the diversity and quality of the generated motions. Leveraging the semantic understanding capabilities of a large language model (LLM), we decompose the input text into fine-grained behavioral units, each guiding the construction of semantically grounded objective functions. To effectively balance conflicting objectives, we adopt an evolutionary algorithm (EA) augmented by a pretrained generative model to initialize and guide population evolution. Each behavioral unit serves as a semantic anchor, steering the search process toward diverse yet semantically faithful motion sequences. Furthermore, we incorporate physics-based criterion into the optimization process to ensure that the generated motions are smooth, stable, and physically plausible.
 Experimental results on mainstream human motion datasets demonstrate that our method outperforms existing approaches in terms of both semantic consistency and diversity, providing a robust solution for generating high-quality, text-aligned human motion sequences.
           </p>
         </div>
@@ -149,32 +150,38 @@ Experimental results on mainstream human motion datasets demonstrate that our me
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="is-centered has-text-centered"><h2 class="title is-3">Overview</h2></div>
-    
+    <div class="content"></div>
     <div class="hero-body">
       <img src="static/images/overview_v3.png" alt="">
-      <h2 class="subtitle has-text-centered">
+      <h5 class="subtitle has-text-centered">
         The overview of the proposed method. The text description segmented by ChatGPT is used to construct a multiobjective optimization function, which is then solved using EA. Pretrained conditional motion generation is employed to initialize the population. A unique physics-based criterion is introduced into the optimization process to ensure the quality of the generated human motions.
-      </h2>
+      </h5>
     </div>
   </div>
 </section>
 
 
 <section class="hero teaser">
+    <div class="is-centered has-text-centered">
+      <h2 class="title is-3 has-text-centered">
+        The complete prompt used in ChatGPT.
+      </h2>
+    </div>
+    <div class="content"></div>
   <div class="container is-max-desktop">
     <div class="hero-body">
       <img src="static/images/action_prompt.png" alt="">
-      <h2 class="subtitle has-text-centered">
-        The complete prompt used in ChatGPT.
-      </h2>
+            <h5 class="subtitle has-text-centered">
+        Given a piece of text with multiple behavioral semantics, we use ChatGPT to slice the text, with each slice constituting a single optimization goal.
+      </h5>
     </div>
   </div>
 </section>
 
 <section>
-<div class="container">
+<div class="">
   <div class="is-centered has-text-centered">
-      <pre><h2 class="title is-3 has-text-centered">🥳 Results on HumanML3D</h2></pre>
+      <pre><h2 class="title is-3 has-text-centered">🥳 Visualization results</h2></pre>
   </div>
 </div>
 </section>
@@ -194,49 +201,49 @@ Experimental results on mainstream human motion datasets demonstrate that our me
                 <source src="./static/videos/mesh/sample00_rep00_mesh.mp4"
                         type="video/mp4">
               </video>
-              <h5 class="title is-5 is-light ">Taking 3 steps forward starting with left foot and then stopping.</h5>
+              <h5 class="subtitle is-5 is-light ">Taking 3 steps forward starting with left foot and then stopping.</h5>
             </div>
             <div class="item item-chair-tp">
               <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
                 <source src="./static/videos/mesh/sample01_rep00_mesh.mp4"
                         type="video/mp4">
               </video>
-              <h5 class="title is-5 is-light ">Walking forward and stomping feet.</h5>
+              <h5 class="subtitle is-5 is-light ">Walking forward and stomping feet.</h5>
             </div>
             <div class="item item-chair-tp">
               <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
                 <source src="./static/videos/mesh/sample02_rep00_mesh.mp4"
                         type="video/mp4">
               </video>
-              <h5 class="title is-5 is-light ">A person walks forward and to the left.</h5>
+              <h5 class="subtitle is-5 is-light ">A person walks forward and to the left.</h5>
             </div>
             <div class="item item-chair-tp">
               <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
                 <source src="./static/videos/mesh/sample05_rep00_mesh.mp4"
                         type="video/mp4">
               </video>
-              <h5 class="title is-5 is-light ">A person is being still and leaning slightly to their left.</h5>
+              <h5 class="subtitle is-5 is-light ">A person is being still and leaning slightly to their left.</h5>
             </div>
             <div class="item item-chair-tp">
               <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
                 <source src="./static/videos/mesh/sample06_rep00_mesh.mp4"
                         type="video/mp4">
               </video>
-              <h5 class="title is-5 is-light ">A person is walking up a flight of steps.</h5>
+              <h5 class="subtitle is-5 is-light ">A person is walking up a flight of steps.</h5>
             </div>
             <div class="item item-chair-tp">
               <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
                 <source src="./static/videos/mesh/sample07_rep00_mesh.mp4"
                         type="video/mp4">
               </video>
-              <h5 class="title is-5 is-light ">A person is jogging and then gets down and walks like an ape and then gets back up and jogs again.</h5>
+              <h5 class="subtitle is-5 is-light ">A person is jogging and then gets down and walks like an ape and then gets back up and jogs again.</h5>
             </div>
             <div class="item item-chair-tp">
               <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
                 <source src="./static/videos/mesh/sample09_rep00_mesh.mp4"
                         type="video/mp4">
               </video>
-              <h5 class="title is-5 is-light ">A man is crouching and moves his right arm slowly up and down.</h5>
+              <h5 class="subtitle is-5 is-light ">A man is crouching and moves his right arm slowly up and down.</h5>
             </div>
           </div>
         </div>
@@ -256,7 +263,7 @@ Experimental results on mainstream human motion datasets demonstrate that our me
           <div is-centered has-text-centered column is-10>
             <h3 class="title is-3 has-text-centered">Visualize in the form of skeleton</h3>
             <h5 class="title is-5 is-light ">
-            Diversity ouput
+            Diverse ouput
           </h5>
           </div>
           <div id="results-carousel" class="carousel results-carousel">
@@ -317,6 +324,7 @@ Experimental results on mainstream human motion datasets demonstrate that our me
               </video>
             </div>
           </div>
+          <h5 class="subtitle is-5 is-light">We display three motion generations for each description. <br>Our method shows certain diversity among different generations while respecting the textual description.</h5>
         </div>
       </div>
     </div>
@@ -334,11 +342,11 @@ Experimental results on mainstream human motion datasets demonstrate that our me
           </h5>
           <div id="results-carousel" class="carousel results-carousel">
             <div class="item item-steve">
-              <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-                <source src="./static/videos/crossover/01/sample01_rep00.mp4"
+              <video poster="" id="steve" autoplay controls muted loop playsinline width="80%">
+                <source src="./static/videos/crossover/c1.mp4"
                         type="video/mp4">
               </video>
-              <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
+              <!-- <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
                 <source src="./static/videos/crossover/01/sample02_rep00.mp4"
                         type="video/mp4">
               </video>
@@ -346,14 +354,14 @@ Experimental results on mainstream human motion datasets demonstrate that our me
               <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
                 <source src="./static/videos/crossover/01/sample00_rep00.mp4"
                         type="video/mp4">
-              </video>
+              </video> -->
             </div>
             <div class="item item-chair-tp">
-              <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-                <source src="./static/videos/crossover/02/sample01_rep00.mp4"
+              <video poster="" id="steve" autoplay controls muted loop playsinline width="80%">
+                <source src="./static/videos/crossover/c2.mp4"
                         type="video/mp4">
               </video>
-              <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
+              <!-- <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
                 <source src="./static/videos/crossover/02/sample02_rep00.mp4"
                         type="video/mp4">
               </video>
@@ -361,9 +369,10 @@ Experimental results on mainstream human motion datasets demonstrate that our me
               <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
                 <source src="./static/videos/crossover/02/sample00_rep00.mp4"
                         type="video/mp4">
-              </video>
+              </video> -->
             </div>
           </div>
+          <h5 class="subtitle is-5">We show a sequence of human motions generated by crossover operation. <br>By exchanging the latent encode corresponding to the body part of the parent sequence, <br>the latent code of the child sequence can be obtained, and the children obtained by the decoder retain better motion characteristics.</h5>
         </div>
       </div>
 
