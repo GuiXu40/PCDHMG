@@ -52,7 +52,7 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">Physical Criterion for Diverse 3D Human Motion Generation via LLM-Guided Multiobjective Optimization</h1>
+            <h1 class="title is-1 publication-title">LLM-Guided Multiobjective Generation with Physical Criterion for Diverse 3D Human Motion Generation</h1>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
@@ -137,7 +137,7 @@
           <p class="subtitle">
             Text-driven 3D human motion generation aims to synthesize diverse motion sequences that are semantically aligned with textual descriptions. 
 Most existing generative approaches encode the entire sentence into a single semantic embedding, which inevitably compromises the semantic consistency of the generated motions. Furthermore, in long sequences, the lack of explicit physical constraints often leads to physically implausible motions, particularly in the later segments.
-To address these limitations, we propose PCDHMG, a novel framework that formulates text-driven 3D human motion generation as a multiobjective optimization problem. Without introducing additional parameters, PCDHMG enhances both the diversity and quality of the generated motions. Leveraging the semantic understanding capabilities of a large language model (LLM), we decompose the input text into fine-grained behavioral units, each guiding the construction of semantically grounded objective functions. To effectively balance conflicting objectives, we adopt an evolutionary algorithm (EA) augmented by a pretrained generative model to initialize and guide population evolution. Each behavioral unit serves as a semantic anchor, steering the search process toward diverse yet semantically faithful motion sequences. Furthermore, we incorporate physics-based criterion into the optimization process to ensure that the generated motions are smooth, stable, and physically plausible.
+To address these limitations, we propose LMPGen, a novel framework that formulates text-driven 3D human motion generation as a multiobjective optimization problem. Without introducing additional parameters, PCDHMG enhances both the diversity and quality of the generated motions. Leveraging the semantic understanding capabilities of a large language model (LLM), we decompose the input text into fine-grained behavioral units, each guiding the construction of semantically grounded objective functions. To effectively balance conflicting objectives, we adopt an evolutionary algorithm (EA) augmented by a pretrained generative model to initialize and guide population evolution. Each behavioral unit serves as a semantic anchor, steering the search process toward diverse yet semantically faithful motion sequences. Furthermore, we incorporate physics-based criterion into the optimization process to ensure that the generated motions are smooth, stable, and physically plausible.
 Experimental results on mainstream human motion datasets demonstrate that our method outperforms existing approaches in terms of both semantic consistency and diversity, providing a robust solution for generating high-quality, text-aligned human motion sequences.
           </p>
         </div>
@@ -164,7 +164,7 @@ Experimental results on mainstream human motion datasets demonstrate that our me
 <section class="hero teaser">
     <div class="is-centered has-text-centered">
       <h2 class="title is-3 has-text-centered">
-        The complete prompt used in ChatGPT.
+        Complete prompt used in ChatGPT
       </h2>
     </div>
     <div class="content"></div>
